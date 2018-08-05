@@ -1,4 +1,4 @@
-package com.example.autocompletelocationview;
+package com.shishank.autocompletelocationview;
 
 import android.content.Context;
 import android.graphics.Typeface;

@@ -1,4 +1,4 @@
-package com.example.shishank.autocomepletelocationview;
+package com.android.shishank.autocomepletelocationview;
 
 import org.junit.Test;
 

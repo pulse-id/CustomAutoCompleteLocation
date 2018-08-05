@@ -1,4 +1,4 @@
-package com.example.autocompletelocationview;
+package com.shishank.autocompletelocationview;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
@@ -11,7 +11,8 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.AdapterView;
 
-import com.example.autocompletelocationview.interfaces.OnTextCompleteListener;
+import com.android.autocompletelocationview.R;
+import com.shishank.autocompletelocationview.interfaces.OnTextCompleteListener;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.PendingResult;
 import com.google.android.gms.common.api.ResultCallback;

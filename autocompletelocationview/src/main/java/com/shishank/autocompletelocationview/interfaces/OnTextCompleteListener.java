@@ -1,4 +1,4 @@
-package com.example.autocompletelocationview.interfaces;
+package com.shishank.autocompletelocationview.interfaces;
 
 import com.google.android.gms.location.places.Place;
 

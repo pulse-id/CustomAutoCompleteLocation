@@ -1,10 +1,10 @@
-package com.example.shishank.autocomepletelocationview;
+package com.android.shishank.autocomepletelocationview;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.example.autocompletelocationview.LocationAutoCompleteView;
-import com.example.autocompletelocationview.interfaces.OnTextCompleteListener;
+import com.shishank.autocompletelocationview.LocationAutoCompleteView;
+import com.shishank.autocompletelocationview.interfaces.OnTextCompleteListener;
 import com.google.android.gms.location.places.Place;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -21,9 +21,9 @@ public class MainActivity extends AppCompatActivity implements OnTextCompleteLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(com.shishank.shishank.autocomepletelocationview.R.layout.activity_main);
         SupportMapFragment mapFragment =
-                (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
+                (SupportMapFragment) getSupportFragmentManager().findFragmentById(com.shishank.shishank.autocomepletelocationview.R.id.map);
         mapFragment.getMapAsync(this);
     }
 
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements OnTextCompleteLis
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(madrid, 16));
 
         LocationAutoCompleteView autoCompleteLocation =
-                (LocationAutoCompleteView) findViewById(R.id.autocomplete_view);
+                (LocationAutoCompleteView) findViewById(com.shishank.shishank.autocomepletelocationview.R.id.autocomplete_view);
         autoCompleteLocation.setOnTextCompleteListener(this);
     }
 }
