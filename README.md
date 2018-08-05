@@ -1,3 +1,6 @@
+
+[![](https://jitpack.io/v/pulse-id/CustomAutoCompleteLocation.svg)](https://jitpack.io/#pulse-id/CustomAutoCompleteLocation)
+
 # CustomAutocompleteLocation
 A library to implement PlaceAutocomplete in Android with custom view
 
