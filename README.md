@@ -18,7 +18,7 @@ allprojects {
     }
 }
 	dependencies {
-    	  implementation 'com.github.pulse-id:CustomAutoCompleteLocation:-SNAPSHOT'
+    	  implementation 'com.github.pulse-id:CustomAutoCompleteLocation:v1.0'
 	}
 ```
 ## Maven
