@@ -11,7 +11,7 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.AdapterView;
 
-import com.shishank.autocompletelocationview.interfaces.OnTextCompleteListener;
+import com.shishank.autocompletelocationview.interfaces.OnQueryCompleteListener;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.PendingResult;
 import com.google.android.gms.common.api.ResultCallback;
@@ -27,7 +27,7 @@ public class LocationAutoCompleteView extends android.support.v7.widget.AppCompa
 
     private GoogleApiClient googleApiClient;
     private AutoPlaceCompleteAdapter autoPlaceCompleteAdapter;
-    private OnTextCompleteListener onTextCompleteListener;
+    private OnQueryCompleteListener onQueryCompleteListener;
 
     public LocationAutoCompleteView(Context context) {
         this(context, null, -1);
@@ -67,8 +67,8 @@ public class LocationAutoCompleteView extends android.support.v7.widget.AppCompa
         }
     }
 
-    public void setOnTextCompleteListener(OnTextCompleteListener onTextCompleteListener) {
-        this.onTextCompleteListener = onTextCompleteListener;
+    public void setOnQueryCompleteListener(OnQueryCompleteListener onQueryCompleteListener) {
+        this.onQueryCompleteListener = onQueryCompleteListener;
     }
 
     private TextWatcher textWatcher = new TextWatcher() {
@@ -79,8 +79,8 @@ public class LocationAutoCompleteView extends android.support.v7.widget.AppCompa
 
         @Override
         public void onTextChanged(CharSequence s, int start, int before, int count) {
-            if (onTextCompleteListener != null) {
-                onTextCompleteListener.onTextClear();
+            if (onQueryCompleteListener != null) {
+                onQueryCompleteListener.onTextClear();
             }
         }
 
@@ -107,8 +107,8 @@ public class LocationAutoCompleteView extends android.support.v7.widget.AppCompa
         public void onResult(@NonNull PlaceBuffer places) {
             if (places.getStatus().isSuccess()) {
                 final Place place = places.get(0);
-                if (onTextCompleteListener != null) {
-                    onTextCompleteListener.onPlaceSelected(place);
+                if (onQueryCompleteListener != null) {
+                    onQueryCompleteListener.onPlaceSelected(place);
                 }
                 places.release();
             }

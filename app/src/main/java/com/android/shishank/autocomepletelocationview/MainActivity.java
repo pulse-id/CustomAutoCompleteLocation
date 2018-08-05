@@ -4,7 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.shishank.autocompletelocationview.LocationAutoCompleteView;
-import com.shishank.autocompletelocationview.interfaces.OnTextCompleteListener;
+import com.shishank.autocompletelocationview.interfaces.OnQueryCompleteListener;
 import com.google.android.gms.location.places.Place;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -13,7 +13,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class MainActivity extends AppCompatActivity implements OnTextCompleteListener, OnMapReadyCallback {
+public class MainActivity extends AppCompatActivity implements OnQueryCompleteListener, OnMapReadyCallback {
 
     private GoogleMap map;
 
@@ -47,6 +47,6 @@ public class MainActivity extends AppCompatActivity implements OnTextCompleteLis
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(madrid, 16));
 
         LocationAutoCompleteView autoCompleteLocation = findViewById(R.id.autocomplete_view);
-        autoCompleteLocation.setOnTextCompleteListener(this);
+        autoCompleteLocation.setOnQueryCompleteListener(this);
     }
 }
