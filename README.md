@@ -21,6 +21,14 @@ allprojects {
     	  implementation 'com.github.pulse-id:CustomAutoCompleteLocation:-SNAPSHOT'
 	}
 ```
+## Maven
+```xml
+<dependency>
+	    <groupId>com.github.pulse-id</groupId>
+	    <artifactId>CustomAutoCompleteLocation</artifactId>
+	    <version>master</version>
+	</dependency>
+```
 **Get a Google Maps API Key and enabled the Google Places API for Android** *(Add your API Key in AndroidManifest)*:
 
 ```xml
