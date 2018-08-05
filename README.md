@@ -1,13 +1,9 @@
 # CustomAutocompleteLocation
 A library to implement PlaceAutocomplete in Android with custom view
 
-<img src="images/image1.png" width="200px" height="356px" />
-<img src="images/image2.png" width="200px" height="356px" />
 <img src="images/image3.png" width="200px" height="356px" />
-
-#Native version
-Maybe it would be useful to take a look into the new official approach
-https://developers.google.com/places/android-api/autocomplete
+<img src="images/image2.png" width="200px" height="356px" />
+<img src="images/image1.png" width="200px" height="356px" />
 
 # Usage
 **Add the dependencies to your gradle file:**
