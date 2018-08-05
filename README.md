@@ -61,11 +61,26 @@ allprojects {
 public class MainActivity extends Activity
    implements OnQueryCompleteListener{
 
-  @Override protected void onCreate(Bundle savedInstanceState) {
-    ...
-    LocationAutoCompleteView locationAutoCompleteView = findViewById(R.id.autocomplete_view);
-    locationAutoCompleteView.setAutoCompleteTextListener(this);
-  }
+@Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        SupportMapFragment mapFragment =
+                (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
+    }
+    
+ @Override
+    public void onMapReady(GoogleMap googleMap) {
+
+        map = googleMap;
+
+        LatLng madrid = new LatLng(25.1685, 75.8447);
+        map.moveCamera(CameraUpdateFactory.newLatLngZoom(madrid, 16));
+
+        LocationAutoCompleteView autoCompleteLocation = findViewById(R.id.autocomplete_view);
+        autoCompleteLocation.setOnQueryCompleteListener(this);
+    }
 }
 ```
 **Get the place:**
