@@ -64,7 +64,7 @@ public class MainActivity extends Activity
   @Override protected void onCreate(Bundle savedInstanceState) {
     ...
     AutoCompleteLocation autoCompleteLocation =
-        (AutoCompleteLocation) findViewById(R.id.autocomplete_location);
+        (AutoCompleteLocation) findViewById(R.id.autocomplete_view);
     autoCompleteLocation.setAutoCompleteTextListener(this);
   }
 }
