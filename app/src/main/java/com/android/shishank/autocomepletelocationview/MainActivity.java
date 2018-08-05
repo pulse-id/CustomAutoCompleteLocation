@@ -15,15 +15,14 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MainActivity extends AppCompatActivity implements OnTextCompleteListener, OnMapReadyCallback {
 
-
     private GoogleMap map;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(com.shishank.shishank.autocomepletelocationview.R.layout.activity_main);
+        setContentView(R.layout.activity_main);
         SupportMapFragment mapFragment =
-                (SupportMapFragment) getSupportFragmentManager().findFragmentById(com.shishank.shishank.autocomepletelocationview.R.id.map);
+                (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
     }
 
@@ -47,8 +46,7 @@ public class MainActivity extends AppCompatActivity implements OnTextCompleteLis
         LatLng madrid = new LatLng(25.1685, 75.8447);
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(madrid, 16));
 
-        LocationAutoCompleteView autoCompleteLocation =
-                (LocationAutoCompleteView) findViewById(com.shishank.shishank.autocomepletelocationview.R.id.autocomplete_view);
+        LocationAutoCompleteView autoCompleteLocation = findViewById(R.id.autocomplete_view);
         autoCompleteLocation.setOnTextCompleteListener(this);
     }
 }
