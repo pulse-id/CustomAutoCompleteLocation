@@ -22,11 +22,22 @@ A library to implement PlaceAutocomplete in Android with custom view
 ```
 **Add the AutocompleteLocation into the layout:**
 ```xml
-  <com.jota.autocompletelocation.AutoCompleteLocation
-      android:id="@+id/autocomplete_location"
+<com.shishank.autocompletelocationview.LocationAutoCompleteView
+      android:id="@+id/autocomplete_view"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      />
+      android:layout_gravity="center_horizontal"
+      android:layout_margin="12dp"
+      android:background="@drawable/white_bg"
+      android:focusableInTouchMode="true"
+      android:hint="@string/place_autocomplete_search_hint"
+      android:paddingBottom="10dp"
+      android:paddingLeft="10dp"
+      android:paddingRight="10dp"
+      android:paddingTop="10dp"
+      android:textColor="#000000"
+      android:textColorHint="@android:color/darker_gray"
+      android:textSize="17sp" />
 ```
 **Set the listeners:**
 ```java
@@ -54,24 +65,6 @@ public class MainActivity extends Activity
        map.addMarker(new MarkerOptions().position(selectedPlace.getLatLng()));
        map.moveCamera(CameraUpdateFactory.newLatLngZoom(selectedPlace.getLatLng(), 16));
    }
-```
-
-  <com.shishank.autocompletelocationview.LocationAutoCompleteView
-      android:id="@+id/autocomplete_view"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_gravity="center_horizontal"
-      android:layout_margin="12dp"
-      android:background="@drawable/white_bg"
-      android:focusableInTouchMode="true"
-      android:hint="@string/place_autocomplete_search_hint"
-      android:paddingBottom="10dp"
-      android:paddingLeft="10dp"
-      android:paddingRight="10dp"
-      android:paddingTop="10dp"
-      android:textColor="#000000"
-      android:textColorHint="@android:color/darker_gray"
-      android:textSize="17sp" />
 ```
 
 # Help me
