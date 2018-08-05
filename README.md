@@ -8,6 +8,12 @@ A library to implement PlaceAutocomplete in Android with custom view
 # Usage
 **Add the dependencies to your gradle file:**
 ```java
+
+allprojects {
+    repositories {
+        maven { url 'https://jitpack.io' }
+    }
+}
 	dependencies {
     	  implementation 'com.github.pulse-id:CustomAutoCompleteLocation:-SNAPSHOT'
 	}
