@@ -85,7 +85,7 @@ public class MainActivity extends Activity
 ```
 
 # Help me
-Pull requests are more than welcome, help me and others improve this awesome library.
+Pull requests are more than welcome, help me and others improve this library.📜📜
 
 The code is based in the Place Autocomplete original concept.
 
